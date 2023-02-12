@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+    <title>Forms Challenge</title>
+</head>
+<body>
+    <header>
+            <h1>Contact Us</h1>
+    </header>
+    <main>
+            <form action="/challenge" method="GET">
+                <section>
+                <h2>How can we help you?</h2>
+                <ul>
+                    <li>
+                        <label for="username">Your Name</label>
+                        <input type="text" name="user-name" id="username" required>
+                    </li>
+                    <li>
+                        <label for="useremail">Your E-Mail Address</label>
+                        <input type="email" name="user-email" id="useremail" required >
+                    </li>
+                    <li>
+                        <label for="usernumber">Your Phone Number</label>
+                        <input type="tel" name="user-number" id="usernumber" required >
+                    </li>
+                    <li>
+                        <label for="usermessage">Your Message</label>
+                        <textarea id="usermessage" required rows="5" minlength="200"></textarea>
+                    </li>
+                </ul>
+                </section>
+                <section>
+                        <label for="channel">How did you find us?</label>
+                        <select id="channel" name="channel" required>
+                                <option value="search">Web Search</option>
+                                <option value="word-of-mouth">Word of Mouth</option>
+                                <option value="other">Other</option>
+                        </select>
+                </section>
+                <section>
+                        <h2>How should we reply?</h2>
+                        <ul>
+                            <li class="form-control-inline">
+                                <input type="radio" id="verify-phone" name="verify" value="phone" required minlength="5">
+                                <label for="verify-phone">Call me</label>
+                            </li>
+
+                            <li class="form-control-inline">
+                                <input type="radio" id="verify-email" name="verify" value="email" required>
+                                <label for="verify-email">Send me an email</label>
+                            </li>
+
+                            <li class="form-control-inline">
+                                <input type="radio" id="no-reply" name="verify" value="none" required>
+                                <label for="no-reply">Don't reply</label>
+                            </li>   
+                        </ul>
+                </section>
+                <section class="form-control-inline">
+                        <input type="checkbox" id="accept-terms" name="accept-terms" required>
+                        <label for="accept-terms">Accept Terms?</label>
+                </section>
+                <section class="button" >
+                    <button type="reset" id="button-clear">Clear</button>
+                    <button type="submit" id="button-submit">Submit</button>
+                </section>
+            </form>
+        </main>
+</body>
+</html>
